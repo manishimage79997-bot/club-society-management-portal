@@ -1,0 +1,88 @@
+/* LIGHT MODE (default) */
+:root {
+
+    --bg-color: #f4f6f9;
+    --card-color: #ffffff;
+    --text-color: #222222;
+    --header-color: #0f2027;
+    --border-color: #dddddd;
+
+}
+
+
+/* DARK MODE */
+body.dark {
+
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-color: #000000;
+    --border-color: #333333;
+
+}
+
+
+/* APPLY VARIABLES */
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+
+.card,
+.card1,
+.card2,
+.card3,
+.card4,
+.feature-card{
+
+    background: var(--card-color);
+    color: var(--text-color);
+
+}
+
+
+table, th, td{
+    border-color: var(--border-color);
+}
+
+.header{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:12px;
+padding:14px 30px;
+background:var(--header-color);
+color:white;
+}
+
+.header-left{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:contain;
+}
+
+.portal-title{
+font-size:16px;
+font-weight:600;
+}
+
+
+.footer{
+text-align:center;
+padding:15px;
+margin-top:40px;
+font-size:14px;
+background:var(--card-color);
+color:var(--text-color);
+border-top:1px solid rgba(0,0,0,0.1);
+}
