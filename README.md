@@ -61,8 +61,16 @@ Make sure you have the following installed on your system:
    ```php
    $password = "";
    ```
-
-6. Open your browser and run:
+6. Note:
+      This project uses PHPMailer for email functionality.
+      The PHPMailer folder is not included in this repository.
+      
+      To run the project, download PHPMailer from the official GitHub repository:
+      https://github.com/PHPMailer/PHPMailer
+      
+      After downloading, place the PHPMailer folder inside the project directory.
+   
+7. Open your browser and run:
    http://localhost/club-society-management-portal
 
 ---
