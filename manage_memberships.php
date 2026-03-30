@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != "ADMIN") {
 $host = "localhost";
 $dbname = "club_portal";
 $user = "root";
-$pass = "NITISH77";
+$pass = "";  //Put your sql password here
 
 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
 
