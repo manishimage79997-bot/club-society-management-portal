@@ -8,7 +8,7 @@ require 'PHPMailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 
 // DB connection
-$conn = new mysqli("localhost", "root", "NITISH77", "club_portal");
+$conn = new mysqli("localhost", "root", "", "club_portal");  //Put your sql password here
 
 // Get email from session
 if (!isset($_SESSION['reset_email'])) {
