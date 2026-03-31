@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // DB connection
-$conn = new mysqli("localhost", "root", "NITISH77", "club_portal");
+$conn = new mysqli("localhost", "root", "", "club_portal");  //Put your sql password here
 
 $message = "";
 
@@ -46,8 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
 
-                $mail->Username = 'manishimage79997@gmail.com';
-                $mail->Password = 'ngyvopdewbaboams';
+                $mail->Username = ''; // put your email here
+                $mail->Password = ''; // put your 2 step verification passkey here
 
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
