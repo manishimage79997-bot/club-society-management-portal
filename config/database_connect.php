@@ -3,7 +3,7 @@
 
 $host = "localhost";
 $username = "root";
-$password = "NITISH77";
+$password = "";  //Put your sql password here
 $database = "club_portal";
 
 // Create connection
