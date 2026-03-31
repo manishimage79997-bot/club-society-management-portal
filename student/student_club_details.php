@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != "STUDENT") {
     exit();
 }
 
-$pdo = new PDO("mysql:host=localhost;dbname=club_portal;charset=utf8","root","NITISH77");
+$pdo = new PDO("mysql:host=localhost;dbname=club_portal;charset=utf8","root","");  //Put your sql password here
 
 $user_id = $_SESSION['user_id'];
 
