@@ -79,7 +79,7 @@ Make sure you have the following installed on your system:
 ## Project Demo Video
 
 You can watch the working demo here:
-https://your-youtube-link-here
+https://youtu.be/bLJnIw6qCvo
 
 ---
 
