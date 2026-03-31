@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="theme.css">
+    <meta charset="UTF-8">
+    <title>Signup Page | Club and Society Management Portal </title>
+    <link rel="icon" type="image/x-icon" href="Assam_Don_Bosco_University_Logo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #d6e4f7);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            padding:14px 30px;
+            background:#0f2d54;
+            color:white;
+        }
+
+            .header-left{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+            .logo{
+            width:60px;
+            height:60px;
+            object-fit:cover;
+        }
+
+            .portal-title{
+            font-size:25px;
+            font-weight:600;
+        }
+
+        .back-container{
+            padding:20px 30px;
+        }
+
+        .back-btn{
+            display:inline-block;
+            padding:10px 18px;
+            background:#0f2d54;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .back-btn:hover{
+            background:#1c3b47;
+            transform:translateX(-3px);
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .signup-wrapper{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+        }
+        
+        .signup-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0f2d54;
+        }
+
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #2a5298;
+            outline: none;
+        }
+
+        
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #2a5298;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .signup-btn:hover {
+            background-color: #1e3c72;
+        }
+
+        
+        .login-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-text a {
+            text-decoration: none;
+            color: #2a5298;
+            font-weight: 600;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+    
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .signup-container {
+    animation: fadeUp 0.4s ease;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+}
+
+.togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+}
+
+.togglePassword:hover {
+    color: #2a5298;
+}
+
+.togglePassword i {
+    transition: 0.2s ease;
+}
+
+.togglePassword i.fa-eye-slash {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        @media (max-width: 480px) {
+
+    .signup-container {
+        padding: 25px 20px;
+    }
+
+    .signup-container h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .signup-btn {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .login-text {
+        font-size: 13px;
+    }
+}
+
+    .footer{
+        text-align:center;
+        padding:18px;
+        font-size:14px;
+        background:#0f2d54;
+        color:#ccc;
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+    <div class="header-left">
+
+    <img src="adbu_app_logo_512x512.png" class="logo">
+
+    <div class="portal-title">
+    Club & Society Management Portal | Signup Page
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">⬅ Back to Home</a>
+    </div>
+
+    <div class="signup-wrapper">
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+
+        <form id="signupForm" action="sign_up.php" method="POST">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="full_name" id="full_name" required>
+                <div class="error" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" id="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" name="phone_number" id="phone" required>
+                <div class="error" id="phoneError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+
+                <div class="password-wrapper">
+                    <input type="password" name="password" id="password" required>
+                    <span class="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+
+                <div class="error" id="passwordError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+
+                <div class="password-wrapper">
+                    <input type="password" name="confirm_password" id="confirm_password" required>
+                    <span class="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+
+                <div class="error" id="confirmError"></div>
+                <div id="matchMessage" style="font-size:13px; margin-top:5px;"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Role</label>
+                <select name="role" required>
+                    <option value="STUDENT">Student</option>
+                </select>
+            </div>
+
+            <button type="submit" class="signup-btn" id="signupBtn" disabled>Sign Up</button>
+        </form>
+
+        <div class="login-text">
+            Already have an account? <a href="login_page.html">Login</a>
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+    © 2026 Don Bosco University | Club and Society Management Portal | Developed by Jasmine & Manish
+    </footer>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+
+            let name = document.getElementById("full_name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm_password").value;
+
+            let isValid = true;
+
+            document.querySelectorAll(".error").forEach(e => e.innerText = "");
+
+            if (name.length < 3) {
+                document.getElementById("nameError").innerText = "Name must be at least 3 characters.";
+                isValid = false;
+            }
+
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if (!email.match(emailPattern)) {
+    document.getElementById("emailError").innerText = "Enter a valid email address.";
+    isValid = false;
+}
+
+            if (!/^\d{10}$/.test(phone)) {
+    document.getElementById("phoneError").innerText = "Enter a valid 10-digit phone number.";
+    isValid = false;
+}
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirmError").innerText = "Passwords do not match.";
+                matchMessage.innerText = ""; 
+                confirmInput.style.borderColor = "red"; 
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+
+        const toggles = document.querySelectorAll(".togglePassword");
+
+toggles.forEach(toggle => {
+    toggle.addEventListener("click", function () {
+
+        const input = this.previousElementSibling;
+        const icon = this.querySelector("i");
+
+        const type = input.getAttribute("type") === "password" ? "text" : "password";
+        input.setAttribute("type", type);
+
+        icon.classList.toggle("fa-eye");
+        icon.classList.toggle("fa-eye-slash");
+    });
+    
+});
+
+const passwordInput = document.getElementById("password");
+const confirmInput = document.getElementById("confirm_password");
+const matchMessage = document.getElementById("matchMessage");
+
+function checkPasswordMatch() {
+    const password = passwordInput.value;
+    const confirm = confirmInput.value;
+
+    //  FIX: don't show anything if empty
+    if (confirm === "") {
+        matchMessage.innerText = "";
+        confirmInput.style.borderColor = "#ccc";
+        return;
+    }
+
+    if (password === confirm) {
+        matchMessage.innerText = "✅ Passwords match";
+        matchMessage.style.color = "green";
+        confirmInput.style.borderColor = "green";
+    } else {
+        matchMessage.innerText = "❌ Passwords do not match";
+        matchMessage.style.color = "red";
+        confirmInput.style.borderColor = "red";
+    }
+}
+
+passwordInput.addEventListener("input", checkPasswordMatch);
+confirmInput.addEventListener("input", checkPasswordMatch);
+
+const signupBtn = document.getElementById("signupBtn");
+signupBtn.style.opacity = "0.6";
+signupBtn.style.cursor = "not-allowed";
+
+function validateFormLive() {
+    let name = document.getElementById("full_name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let password = passwordInput.value;
+    let confirm = confirmInput.value;
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    let isValid =
+        name.length >= 3 &&
+        email.match(emailPattern) &&
+        /^\d{10}$/.test(phone) &&
+        password.length >= 6 &&
+        password === confirm;
+
+    signupBtn.disabled = !isValid;
+
+    // Optional: change button style
+    if (isValid) {
+        signupBtn.style.opacity = "1";
+        signupBtn.style.cursor = "pointer";
+    } else {
+        signupBtn.style.opacity = "0.6";
+        signupBtn.style.cursor = "not-allowed";
+    }
+}
+
+document.getElementById("full_name").addEventListener("input", validateFormLive);
+document.getElementById("email").addEventListener("input", validateFormLive);
+document.getElementById("phone").addEventListener("input", validateFormLive);
+passwordInput.addEventListener("input", validateFormLive);
+confirmInput.addEventListener("input", validateFormLive);
+
+</script>
+</body>
+</html>
+
