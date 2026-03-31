@@ -23,7 +23,7 @@ $user_id = $_SESSION['user_id'];
 $host = "localhost";
 $dbname = "club_portal";
 $user = "root";
-$pass = "NITISH77";
+$pass = "";  //Put your sql password here
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
